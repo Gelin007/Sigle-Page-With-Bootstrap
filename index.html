@@ -54,12 +54,14 @@
                     <form>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
-                                    <label class="sr-only" for="inputEmail">Email address</label>
-                                    <input type="email" class="form-control form-control-sm mr-1" id="inputEmail" placeholder="Enter email">
+                                <label class="sr-only" for="inputEmail">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="inputEmail"
+                                    placeholder="Enter email">
                             </div>
                             <div class="form-group col-sm-4">
                                 <label class="sr-only" for="inputPassword">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1" id="inputPassword" placeholder="Password">
+                                <input type="password" class="form-control form-control-sm mr-1" id="inputPassword"
+                                    placeholder="Password">
                             </div>
                             <div class="col-sm-auto">
                                 <div class="form-check">
@@ -70,8 +72,9 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
                         </div>
                     </form>
                 </div>
@@ -79,6 +82,84 @@
         </div>
     </div>
 
+
+    <div id="reserveTableModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve Table </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="from-group row pb-3">
+                            <label for="numGuest" class="col-12 col-md-2 col-form-label">Number of Guests</label>
+                            <div class="col-12 col-md-8">
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numGuest" id="numGuest" value="">
+                                    <label class="form-check-label" for="numGuest">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numGuest" id="numGuest" value="">
+                                    <label class="form-check-label" for="numGuest">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numGuest" id="numGuest" value="">
+                                    <label class="form-check-label" for="numGuest">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numGuest" id="numGuest" value="">
+                                    <label class="form-check-label" for="numGuest">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numGuest" id="numGuest" value="">
+                                    <label class="form-check-label" for="numGuest">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numGuest" id="numGuest" value="">
+                                    <label class="form-check-label" for="numGuest">6</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="from-group row pb-3">
+                            <label for="dateTime" class="col-12 col-md-2 col-form-label">Section</label>
+                            <div class="col-12 col-md-10">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                      <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="from-group row pb-3">
+                            <label for="dateTime" class="col-12 col-md-2 col-form-label">Date and Time</label>
+                            <div class="col-12 col-md-4">
+                                <input type="datetime" class="form-control" id="date" name="date" placeholder="Date">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <input type="datetime" class="form-control" id="time" name="time" placeholder="Time">
+                            </div>
+                        </div>
+                        <div class="from-group row">
+                            <div class="offset-md-2 col-md-10">
+                                <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">
+                                    Cancel
+                                </button>
+                                <button type="submit" class="btn btn-primary text-white">
+                                    Reserve
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -93,11 +174,8 @@
                             <img src="img/logo.png" class="img-fluid">
                         </div>
                         <div class="col-12 col-sm-6 mt-sm-5">
-                            <a role="button" class="btn btn-warning btn-block text-dark" 
-                                data-toggle="tooltip" data-html="true" 
-                                title="Or Call us at <br><strong>+852 12345678</strong>"
-                                data-placement="bottom"
-                                href="#reserveTable">Reserve Table</a>
+                            <a role="button" class="btn btn-warning btn-block text-dark" data-toggle="modal"
+                                data-target="#reserveTableModal">Reserve Table</a>
                         </div>
                     </div>
                 </div>
@@ -113,9 +191,12 @@
                         <div class="carousel-item active">
                             <img class="d-block img-fluid" src="img/uthappizza.png" alt="uthappizza">
                             <div class="carousel-caption d-none d-md-block">
-                                <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian
-                                    pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur
+                                <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span><span
+                                        class="badge badge-pill badge-secondary">$4.99</span></h2>
+                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                    Italian
+                                    pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion,
+                                    Guntur
                                     chillies and Buffalo Paneer.</p>
                             </div>
                         </div>
@@ -124,7 +205,8 @@
                             <div class="carousel-caption d-none d-md-block">
                                 <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
                                 <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five
-                                    different salads, six enticing appetizers, six main entrees and five choicest desserts. Free
+                                    different salads, six enticing appetizers, six main entrees and five choicest
+                                    desserts. Free
                                     flowing bubbly and soft drinks. All for just $19.99 per person </p>
                             </div>
                         </div>
@@ -133,8 +215,10 @@
                             <div class="carousel-caption d-none d-md-block">
                                 <h2 class="mt-0">Alberto Somayya</h2>
                                 <h4>Executive Chef</h4>
-                                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International
-                                    experience having worked closely with whos-who in the culinary world, he specializes in
+                                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
+                                    International
+                                    experience having worked closely with whos-who in the culinary world, he specializes
+                                    in
                                     creating mouthwatering Indo-Italian fusion experiences. </p>
                             </div>
                         </div>
@@ -208,7 +292,8 @@
             </div>
         </div>
 
-        <div class="row row-content">
+        <!-- 
+        <div class="row row-content"> 
             <div class="col-12 col-sm-2"></div>
             <div class="col-12 col-sm-8">
                 <div class="card" id="reserveTable">
@@ -272,7 +357,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+        
     </div>
 
     <footer class="footer">
